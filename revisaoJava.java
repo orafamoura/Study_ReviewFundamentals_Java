@@ -18,7 +18,27 @@ public class revisaoJava {
 
         System.out.println(celsius);
         sc.close();
+    }
 
+    public static void tiposString(String[] args) {
+        System.out.println("Ola mundo".charAt(2));
+
+        String s = "Boa tarde";
+        System.out.println(s.concat("!!!"));
+        System.out.println(s + "!!!"); // Mesmo resultado que o concat
+        System.out.println(s.startsWith("Boa")); // True
+        System.out.println(s.startsWith("boa")); //False
+        System.out.println(s.toLowerCase().startsWith("boa")); //True
+        System.out.println(s.equals("boa tarde")); //False
+        System.out.println(s.equalsIgnoreCase("boa tarde"));//True
+
+        var nome = "rafa";
+        var idade = 25;
+        System.out.println("Nome: " + nome +  "\nidade: " + idade); //Muito grande
+        System.out.printf("Nome: %s %d", nome, idade); //Melhor forma
+        // %s para strings
+        // %d para inteiros
+        // %f para compostos
 
     }
 }
