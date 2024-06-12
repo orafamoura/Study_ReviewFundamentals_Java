@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -76,7 +77,29 @@ public class revisaoJava {
         double soma = numero1 + numero2;
         System.out.println("soma e: " + soma);
         System.out.println("media e: " + soma / 2);
-
-
     }
+
+    public static void desafioConversao(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Primeiro salario");
+        String valor1 = sc.next().replace(",", ".");
+
+        System.out.println("Segundo salario");
+        String valor2 = sc.next().replace(",", ".");
+
+        System.out.println("Terceiro salario");
+        String valor3 = sc.next().replace(",", ".");
+
+        double salario1 = Double.parseDouble(valor1);
+        double salario2 = Double.parseDouble(valor2);
+        double salario3 = Double.parseDouble(valor3);
+
+        double media = (salario1 + salario2 + salario3) / 3;
+        System.out.println("A media salarial e: " + media);
+        sc.close();
+    }
+
+
+
 }
