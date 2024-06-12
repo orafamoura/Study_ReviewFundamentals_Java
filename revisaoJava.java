@@ -39,6 +39,16 @@ public class revisaoJava {
         // %s para strings
         // %d para inteiros
         // %f para compostos
+    }
 
+    public static void conversoesTiposPrimitivos(String[] args){
+        double a = 1; //implicit
+        float b = (float) 12.34565789101112; //explicit (cast)
+
+        int c = 130;
+        byte d = (byte) c; //explicit retorna o valor -126
+
+        double e = 1.999999;
+        int f = (int) e; //explicit retorna o valor 1
     }
 }
