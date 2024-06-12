@@ -51,4 +51,12 @@ public class revisaoJava {
         double e = 1.999999;
         int f = (int) e; //explicit retorna o valor 1
     }
+
+    public static void conversoesNumeroString(String[] args) {
+        Integer num1 = 10000;
+        System.out.println(num1.toString().length());
+
+        int num2 = 100000;
+        System.out.println(Integer.toString(num2).length());
+    }
 }
