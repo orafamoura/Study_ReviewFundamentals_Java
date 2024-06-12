@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -58,5 +59,24 @@ public class revisaoJava {
 
         int num2 = 100000;
         System.out.println(Integer.toString(num2).length());
+    }
+
+    public static void conversoesStringNumero(String[] args){
+        String valor1 = JOptionPane.showInputDialog(
+                "Digite o primeiro numero");
+
+        String valor2 = JOptionPane.showInputDialog(
+                "Digite o segundo numero");
+
+        System.out.println(valor1 + valor2);
+
+        double numero1 = Double.parseDouble(valor1);
+        double numero2 = Double.parseDouble(valor2);
+
+        double soma = numero1 + numero2;
+        System.out.println("soma e: " + soma);
+        System.out.println("media e: " + soma / 2);
+
+
     }
 }
