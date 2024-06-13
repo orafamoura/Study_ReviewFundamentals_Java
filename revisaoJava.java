@@ -100,6 +100,13 @@ public class revisaoJava {
         sc.close();
     }
 
+    public static void desafioOperadores(String[] args){
+
+        double a = (Math.pow(6 * (3+2), 2) / (3 * 2)) - (Math.pow(((double) ((1 - 5) * (2 - 7)) / 2), 2));
+        double result = Math.pow(a, 3) / Math.pow(10, 3);
+        
+        System.out.println(result);
+    }
 
 
 }
