@@ -117,4 +117,13 @@ public class revisaoJava {
         System.out.println(a == b);
 
     }
+
+    public static void ternario(String[] args){
+        double media = 5.6;
+
+        //expressao = ? e os valores T ou F = :
+        String resultado = media >= 7.0 ?
+                "aprovado" : "reprovado";
+    }
+
 }
