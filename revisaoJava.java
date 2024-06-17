@@ -126,4 +126,19 @@ public class revisaoJava {
                 "aprovado" : "reprovado";
     }
 
+    public static void tipoStringEquals(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        String s1 = sc.next(); // next tira os espacos em branco
+        String s2 = sc.nextLine(); //nextLine nao tira os espacoes em branco
+
+        //ex de entrada: s1 = 2 e s2 =     2 valor s2 com espaco no comeco
+
+        System.out.println(s1 == s2.trim()); // da false, comparar string melhor usar o equals
+        System.out.println(s1.equals(s2.trim())); // da true
+
+        sc.close();
+    }
+
+
 }
