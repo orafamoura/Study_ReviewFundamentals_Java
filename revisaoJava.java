@@ -140,5 +140,24 @@ public class revisaoJava {
         sc.close();
     }
 
+    public static void desafioCalculadora(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite um numero: ");
+        double n1 = sc.nextDouble();
+        System.out.println("Digite outro numero: ");
+        double n2 = sc.nextDouble();
+        System.out.println("Qual tipo de conta vai ser (+ - * / %): ");
+        String aux = sc.next();
+
+        double resultado = aux.equals("+") ? n1 + n2 : 0;
+        resultado = aux.equals("-") ? n1 - n2 : resultado;
+        resultado = aux.equals("*") ? n1 * n2: resultado;
+        resultado = aux.equals("/") ? n1 / n2: resultado;
+        resultado = aux.equals("%") ? n1 % n2: resultado;
+
+        System.out.println(resultado);
+        sc.close();
+    }
+
 
 }
