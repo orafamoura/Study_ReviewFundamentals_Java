@@ -101,12 +101,20 @@ public class revisaoJava {
     }
 
     public static void desafioOperadores(String[] args){
-
         double a = (Math.pow(6 * (3+2), 2) / (3 * 2)) - (Math.pow(((double) ((1 - 5) * (2 - 7)) / 2), 2));
         double result = Math.pow(a, 3) / Math.pow(10, 3);
-        
+
         System.out.println(result);
     }
 
+    public static void unarios(String[] args){
+        int a = 1;
+        int b = 2;
 
+        //aqui da verdadeiro por conta da precedencia ++ na frente do A, o resultado e contabilizado antes do valor ser atribuido
+        System.out.println(++a == b--);
+        //aqui ja da falso pois os valores ja estao atribuidos
+        System.out.println(a == b);
+
+    }
 }
