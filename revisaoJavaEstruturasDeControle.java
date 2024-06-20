@@ -13,17 +13,17 @@ public class revisaoJavaEstruturasDeControle {
         System.out.println("Digite um numero de 0 a 100");
         int n1 = sc.nextInt();
 
-        if(n1 < 0 || n1 > 100){
+        if (n1 < 0 || n1 > 100) {
             System.out.println("entre com um numero valido");
         } else {
             String numberPlace = n1 <= 10 ? "Esta entre os 10" : "Nao esta entre os 10";
-            String parityMessage = n1 % 2 == 0? " PAR" : " IMPAR";
+            String parityMessage = n1 % 2 == 0 ? " PAR" : " IMPAR";
             System.out.println(numberPlace + parityMessage);
         }
         sc.close();
     }
 
-    public static void anoBissexto(String[] args){
+    public static void anoBissexto(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -32,7 +32,7 @@ public class revisaoJavaEstruturasDeControle {
 
         boolean result = (anoAtual % 4 == 0 && (anoAtual % 100 != 0 || anoAtual % 400 == 0));
 
-        if(result){
+        if (result) {
             System.out.println("ano bissexto");
         } else {
             System.out.println("nao e bissexto");
@@ -40,7 +40,7 @@ public class revisaoJavaEstruturasDeControle {
         sc.close();
     }
 
-    public static void mediaEscolar(String[] args){
+    public static void mediaEscolar(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -52,9 +52,9 @@ public class revisaoJavaEstruturasDeControle {
 
         double mediaFinal = (n1 + n2) / 2;
 
-        if(mediaFinal >= 7.0){
+        if (mediaFinal >= 7.0) {
             System.out.println("Aprovado");
-        } else if(mediaFinal < 7.0 && mediaFinal >= 4.0){
+        } else if (mediaFinal < 7.0 && mediaFinal >= 4.0) {
             System.out.println("Recuperacao");
         } else {
             System.out.println("Reprovado");
@@ -62,4 +62,24 @@ public class revisaoJavaEstruturasDeControle {
         sc.close();
     }
 
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("digite um numero: ");
+        int numero = sc.nextInt();
+        int contadorDeDivisores = 0;
+
+        for (int i = 2; i < numero; i++) {
+            if (numero % i == 0) {
+                contadorDeDivisores++;
+            }
+        }
+
+        if (contadorDeDivisores == 0) {
+            System.out.println("numero primo");
+        } else {
+            System.out.println("numero nao e primo");
+        }
+    }
 }
