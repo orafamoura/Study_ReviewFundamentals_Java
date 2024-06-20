@@ -22,4 +22,19 @@ public class revisaoJavaEstruturasDeControle {
         }
         sc.close();
     }
+    public static void anoBissexto(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Em que ano estamos: ");
+        int anoAtual = sc.nextInt();
+
+        boolean result = (anoAtual % 4 == 0 && (anoAtual % 100 != 0 || anoAtual % 400 == 0));
+
+        if(result){
+            System.out.println("ano bissexto");
+        } else {
+            System.out.println("nao e bissexto");
+        }
+        sc.close();
+    }
 }
