@@ -110,4 +110,25 @@ public class revisaoJavaEstruturasDeControle {
 
         sc.close();
     }
+
+    public static void numerosPositivos(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        int n1 = 0;
+        int aux;
+        do {
+            System.out.println("Entre com um numero positivo: ");
+            aux = sc.nextInt();
+            n1 = n1 + aux;
+            System.out.println(n1);
+        } while(aux >= 0);
+        sc.close();
+    }
+
+
+
+
+
+
 }
