@@ -126,9 +126,23 @@ public class revisaoJavaEstruturasDeControle {
         sc.close();
     }
 
+    public static void main(String[] args){
 
+        Scanner sc = new Scanner(System.in);
 
+        System.out.println("Digite alguma palavra: ");
+        String palavra = sc.next();
 
+        for(int i = 0; i < palavra.length(); i++){
+            System.out.println(palavra.charAt(i));
+        }
 
+        //Criando com um array
+        char[] letras = palavra.toCharArray();
 
+        for (int i = 0; i < letras.length; i++) {
+            System.out.println(letras[i]);
+        }
+        sc.close();
+    }
 }
