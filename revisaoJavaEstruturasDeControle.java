@@ -1,4 +1,5 @@
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class revisaoJavaEstruturasDeControle {
@@ -62,7 +63,7 @@ public class revisaoJavaEstruturasDeControle {
         sc.close();
     }
 
-    public static void main(String[] args) {
+    public static void numerosPrimos(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -81,5 +82,32 @@ public class revisaoJavaEstruturasDeControle {
         } else {
             System.out.println("numero nao e primo");
         }
+    }
+
+    public static void desafioAdivinhacao(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+
+        int numeroSorteado = rand.nextInt(101);
+        int numerosDigitados;
+        int quantidadeRestante = 10;
+
+        do {
+            System.out.println("Digite um numero: ");
+            numerosDigitados = sc.nextInt();
+            quantidadeRestante--;
+
+            if (numerosDigitados > numeroSorteado) {
+                System.out.printf("Numero menor que esse, tentativas restantes: %d\n", quantidadeRestante);
+            } else if (numerosDigitados < numeroSorteado) {
+                System.out.printf("Numero maior que esse, tentativas restantes: %d\n", quantidadeRestante);
+            } else {
+                System.out.println("Parabenss!");
+            }
+
+        } while(numerosDigitados != numeroSorteado && quantidadeRestante > 0);
+
+        sc.close();
     }
 }
