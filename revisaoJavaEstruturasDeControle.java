@@ -126,7 +126,7 @@ public class revisaoJavaEstruturasDeControle {
         sc.close();
     }
 
-    public static void main(String[] args){
+    public static void letraPorLetra(String[] args){
 
         Scanner sc = new Scanner(System.in);
 
@@ -143,6 +143,31 @@ public class revisaoJavaEstruturasDeControle {
         for (int i = 0; i < letras.length; i++) {
             System.out.println(letras[i]);
         }
+        sc.close();
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int auxNumero = 10;
+        int valor;
+        int aux = 0;
+
+        System.out.println("Digite 10 valores, um de cada vez");
+        while (auxNumero > 0){
+            System.out.printf("%d Digite algum valor de 0 a 100: ", auxNumero);
+            auxNumero--;
+            valor = sc.nextInt();
+
+            if (valor <= 100 && valor > 0){
+                for(int i = 0; i <= valor; i++){
+                    aux = Math.max(valor, aux);
+                }
+            } else {
+                System.out.println("digite algum valor correto");
+            }
+        }
+        System.out.printf("O maior valor recebido foi: %d", aux);
         sc.close();
     }
 }
